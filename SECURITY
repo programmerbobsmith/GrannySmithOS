@@ -1,0 +1,26 @@
+# Security Policy
+
+## Supported Versions
+
+As of June 10, 2022, all versions of this file (which have remained unreleased to the general public) are supported.
+
+| Version             | Supported          |
+| ------------------- | ------------------ |
+| 12.0.1 (unreleased) | :white_check_mark: |
+
+## Reporting a Vulnerability
+   1. The easiest and quickest way to report a vulnerability is to send a PM to ProgrammerBobSmith on cemetech.net.
+   2. Your PM's subject must contain the following title: "GrannySmithOS Security Issue".
+      - NOTE: If you find a severe security threat, one that might reset RAM or anything of similar magnitude, you should title your message: "GrannySmithOS Security Breach".
+   3. In order for your security report to be considered your message must contain the following:
+      - A general description of the issue encountered (or might be encountered).
+      - The source code file and line numbers where the proposed security issue/breach exists.
+      - An explanation of how this security issue/breach might be fixed. (optional)
+   4. While it may take up a week to recieve a response, please be aware that a security fix may take weeks to be fixed and a new version released.
+      - If you do not provide an explanation of how the security issue/breach might be fixed, it may take a month or two to fix the security issue/breach.
+   5. All persons reporting VALID security threats will be given respective acknowledgment.
+   6. I (Jonathan K. 'ProgrammerBobSmith') retain all rights to reject any security issue/breach without a disclosure of the reasons of rejection.
+      - Under no circumstance will I reject a security issue/breach under grounds of time or work associated with the repair.
+   
+## Who May Fix a Security Issue/Breach
+   1. Only the creator of GrannySmithOS (Jonathan K. 'ProgrammerBobSmith') has unlimited vested authority to modify the source code to fix security issues.
