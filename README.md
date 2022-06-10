@@ -1,2 +1,0 @@
-# GrannySmithOS
-macOS Monterey 
