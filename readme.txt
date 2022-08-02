@@ -85,7 +85,9 @@ to submit the following:
 	3: Steps required to reproduce problem.
 
 Terms of Use and Privacy Policy:
-	Throughout this document and any others that ascribe to the software created by Jonathan
+	The following refers to all parts of the program that are created by Jonathan Khayat.
+For information about CHESS.8xp, NOTES.8xp, and PCAS.8xp contact their respective owners.
+Throughout this document and any others that ascribe to the software created by Jonathan
 Khayat, the terms 'creator','I', and 'Jonathan Khayat' are interchangable and refer to the
 copyright owner and creator of this software, the terms 'software','GrannySmithOS','program',
 and 'OS' are all refering to GrannySmithOS which was created by the copyright owner and creator
