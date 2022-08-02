@@ -6,7 +6,7 @@ As of June 10, 2022, all versions of this file (which have remained unreleased t
 
 | Version             | Supported          |
 | ------------------- | ------------------ |
-| 12.0.1 (unreleased) |        YES         |
+| 12.2.1 (released)   |        YES         |
 
 ## Reporting a Vulnerability
    1. The easiest and quickest way to report a vulnerability is to send a PM to ProgrammerBobSmith on cemetech.net.
@@ -15,6 +15,7 @@ As of June 10, 2022, all versions of this file (which have remained unreleased t
    3. In order for your security report to be considered your message must contain the following:
       - A general description of the issue encountered (or might be encountered).
       - The source code file and line numbers where the proposed security issue/breach exists.
+      - A copy of MONTDAT.8xp from your calculator.
       - An explanation of how this security issue/breach might be fixed. (optional)
    4. While it may take up a week to recieve a response, please be aware that a security fix may take weeks to be fixed and a new version released.
       - If you do not provide an explanation of how the security issue/breach might be fixed, it may take a month or two to fix the security issue/breach.
