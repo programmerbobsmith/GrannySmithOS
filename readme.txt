@@ -1,10 +1,10 @@
 /////////////////////////////////////////////////////////////////////////////////////
 //////////                                                                 //////////
-//////////							INTRODUCING:						   //////////
-//////////																   //////////
-//////////					   GrannySmithOS v. 12.2.1				   	   //////////
+//////////		             INTRODUCING			   //////////
+//////////								   //////////
+//////////	                GrannySmithOS v. 12.2.1			   //////////
 //////////                                                                 //////////
-//////////						macOS Monterey v. 12.1					   //////////
+//////////			macOS Monterey v. 12.1			   //////////
 //////////                                                                 //////////
 //////////                    By: Jonathan Khayat 'Bob Smith'              //////////
 /////////////////////////////////////////////////////////////////////////////////////
@@ -27,7 +27,7 @@ Navigation:
 	-	Enter					- Click/make a selection
 	–	Clear					- Return to the TI-OS
 	–	Prgm					– Opens Launchpad
-	-	Y=						- Opens WordCE
+	-	Y=					- Opens WordCE
 	-	Window					- Opens Computer Algebra System
 	-	Zoom					- Opens Algebra App
 	-	Trace					- Opens Geometry App
@@ -35,12 +35,12 @@ Navigation:
 
 Built-in Apps/Utilities (as of last offical public release):
 	-	Launchpad
-	-	WordCE
-	-	PineappleCAS
+	-	WordCE (credit: MateoC)
+	-	PineappleCAS (credit: squishy)
 	-	Algebra App
 	-	Trigonometry App
 	-	Geometry App
-	-	Chess App
+	-	Chess App (credit: MateoC)
 
 History:
 	- 	This project was born on May 25, 2022, when I realized that while there were some
