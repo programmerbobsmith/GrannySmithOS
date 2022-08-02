@@ -1,0 +1,65 @@
+palettes:
+  - name: global_palette
+    images: automatic
+    fixed-entries:
+      - color: {index: 31, r: 0, g: 228, b: 252}
+      - color: {index: 6, r: 25, g: 195, b: 76}
+      - color: {index: 7, r: 0, g: 226, b: 90}
+      - color: {index: 254, r: 255, g: 223, b: 245}
+      - color: {index: 8, r: 9, g: 0, b: 51}
+      - color: {index: 231, r: 230, g: 255, b: 58}
+      - color: {index: 39, r: 33, g: 231, b: 58}
+      - color: {index: 95, r: 90, g: 235, b: 255}
+
+converts:
+  - name: background
+    palette: global_palette
+    compress: zx0
+    width-and-height: false
+    images:
+      - background.png
+
+converts:
+  - name: sprites
+    palette: global_palette
+    transparent-color-index: 7
+    images:
+      - algebra_icon.png
+      - applelogo.png
+      - battery.png
+      - bluetooth.png
+      - chess_icon.png
+      - chem_icon.png
+      - dialog_confirmation.png
+      - dialog_corner1.png
+      - dialog_corner2.png
+      - dialog_corner3.png
+      - dialog_corner4.png
+      - finder_corner1.png
+      - finder_corner2.png
+      - finder_corner3.png
+      - finder_corner4.png
+      - finder_icon.png
+      - geometry_icon.png
+      - launchpad_icon.png
+      - launchpad_basic.png
+      - launchpad_cprog.png
+      - menuapple.png
+      - notification.png
+      - pcas.png
+      - search.png
+      - settings_icon.png
+      - trig_icon.png
+      - word_icon.png
+      - word_file.png
+
+outputs:
+  - type: c
+    include-file: gfx.h
+    palettes:
+      - global_palette
+    converts:
+      - sprites
+      - background
+
+
