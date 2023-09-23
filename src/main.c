@@ -63,6 +63,7 @@ struct montdat_t
 	unsigned int trigonometry;
 	unsigned int chess;
 	unsigned int credits;
+	unsigned int settings;
 }data;
 
 uint8_t montset,montdat;
@@ -99,6 +100,7 @@ int second_main()
 		data.geometry = 0;
 		data.chess = 0;
 		data.credits = 0;
+		data.settings=0;
 		ti_Write(&data,sizeof(struct montdat_t),1,montdat);
 		ti_Rewind(montdat);
 	}
@@ -173,6 +175,9 @@ int second_main()
 					break;
 				case sk_Graph:
 					decode_Enter(18);
+					break;
+				case sk_Del:
+					decode_Enter(20);
 					break;
 					
 			}
@@ -321,8 +326,8 @@ void dock_draw(void)
 	gfx_TransparentSprite(geometry_icon,dock_x+131,dock_y+5);
 	gfx_TransparentSprite(trig_icon,dock_x+156,dock_y+5);
 	//gfx_TransparentSprite(chem_icon,dock_x+181,dock_y+5);
-	gfx_TransparentSprite(chess_icon,dock_x+181,dock_y+5); // once chem is implemented this should be 206
-	gfx_TransparentSprite(settings_icon,dock_x+206,dock_y+5);
+    gfx_TransparentSprite(chess_icon,dock_x+181,dock_y+5); // once chem is implemented this should be 206
+    gfx_TransparentSprite(settings_icon,dock_x+206,dock_y+5);
 }
 
 void decode_Enter(unsigned int returned)
