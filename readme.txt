@@ -6,9 +6,11 @@
 //////////                                                                 //////////
 //////////			macOS Monterey v. 12.1			   //////////
 //////////                                                                 //////////
-//////////                    By: Jonathan Khayat 'Bob Smith'              //////////
+//////////          By: Jonathan Khayat 'Bob Smith' + DarkSystemGit        //////////
 /////////////////////////////////////////////////////////////////////////////////////
 
+Fork:
+	This fork should have made the settings app accesable
 
 About:
 	GrannySmithOS is an all-purpose shell for the CE calculator, which includes convenient
