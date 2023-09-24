@@ -9,7 +9,7 @@
 #include <string.h>
 #include "error.h"
 
-#include <timers.h>
+#include <sys/timers.h>
 void launchpad_gui(void)
 {
 	zx0_Decompress(gfx_vram,background_compressed);
