@@ -10,6 +10,7 @@
 #include "error.h"
 #include <time.h>
 
+
 void launchpad_gui(void)
 {
 	zx0_Decompress(gfx_vram,background_compressed);
@@ -51,7 +52,7 @@ void launchpad_prog_basic(void)
 	if (var_name == NULL && y == 10)
 	{
 		gfx_PrintStringXY("No TI-Basic Programs!",80,80);
-		msleep(2000);
+		sleep(2);
 		return;
 	}
 	unsigned int num_prog = (y-10)/15;
@@ -97,7 +98,7 @@ void launchpad_prog_c(void)
 	if (var_name == NULL && y == 10)
 	{
 		gfx_PrintStringXY("No C/ASM Programs!",80,80);
-		msleep(2000);
+		sleep(2);
 		return;
 	}
 	unsigned int num_prog = (y-10)/15;
