@@ -118,8 +118,8 @@ int second_main()
 		settings.color_menu = 31;
 		settings.color_dock = 31;
 		settings.color_launchpadprog = 254;
-		settings.cursor_outline = 254;
-		settings.cursor_interior = 0;
+		settings.cursor_outline = 0;
+		settings.cursor_interior = 254;
 		ti_Write(&settings,sizeof(struct settings_t),1,montset);
 		ti_Close(montset);
 		montset = ti_Open("MONTSET","r+");
