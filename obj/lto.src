@@ -8092,15 +8092,16 @@ BB33_2:
 	ld	(_settings), iy
 	ld	bc, 8
 	ld	(_settings+3), bc
-	ld	de, 31
-	ld	(_settings+6), de
-	ld	bc, 254
-	ld	(_settings+9), bc
-	ld	(_settings+12), de
-	ld	(_settings+15), de
-	ld	(_settings+18), bc
-	ld	(_settings+24), bc
-	ld	(_settings+21), iy
+	ld	bc, 31
+	ld	(_settings+6), bc
+	ld	de, 254
+	ld	(_settings+9), de
+	ld	(_settings+12), bc
+	ld	(_settings+15), bc
+	ld	(_settings+18), de
+	ld	(_settings+24), iy
+	inc	de
+	ld	(_settings+21), de
 	push	hl
 	ld	hl, 1
 	push	hl
