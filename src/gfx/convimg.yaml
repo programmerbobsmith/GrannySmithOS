@@ -52,7 +52,8 @@ converts:
       - trig_icon.png
       - word_icon.png
       - word_file.png
-
+      - settingscorner2.png
+      - settingscorner.png
 outputs:
   - type: c
     include-file: gfx.h

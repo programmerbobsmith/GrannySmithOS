@@ -17,4 +17,5 @@ obj/src/about.c.bc: src/about.c src/about.h \
   src/gfx/launchpad_basic.h src/gfx/launchpad_cprog.h \
   src/gfx/menuapple.h src/gfx/notification.h src/gfx/pcas.h \
   src/gfx/search.h src/gfx/settings_icon.h src/gfx/trig_icon.h \
-  src/gfx/word_icon.h src/gfx/word_file.h src/gfx/background.h
+  src/gfx/word_icon.h src/gfx/word_file.h src/gfx/settingscorner2.h \
+  src/gfx/settingscorner.h src/gfx/background.h

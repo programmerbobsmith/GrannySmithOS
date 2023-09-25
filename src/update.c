@@ -8,9 +8,9 @@
 void update_clock(void)
 {
 
-	gfx_SetColor(12);
+	gfx_SetColor(250);
 	gfx_FillRectangle(212,1,50,10);
-	gfx_SetTextFGColor(254);
+	gfx_SetTextFGColor(0);
 	uint8_t clock_minutes = rtc_Minutes;
 	uint8_t clock_hours = rtc_Hours;
 	if (boot_IsAfterNoon())

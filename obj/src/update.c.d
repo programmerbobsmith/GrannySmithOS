@@ -15,7 +15,8 @@ obj/src/update.c.bc: src/update.c src/update.h \
   src/gfx/launchpad_basic.h src/gfx/launchpad_cprog.h \
   src/gfx/menuapple.h src/gfx/notification.h src/gfx/pcas.h \
   src/gfx/search.h src/gfx/settings_icon.h src/gfx/trig_icon.h \
-  src/gfx/word_icon.h src/gfx/word_file.h src/gfx/background.h \
+  src/gfx/word_icon.h src/gfx/word_file.h src/gfx/settingscorner2.h \
+  src/gfx/settingscorner.h src/gfx/background.h \
   /home/pdarksystem/CEdev/include/sys/power.h \
   /home/pdarksystem/CEdev/include/sys/rtc.h \
   /home/pdarksystem/CEdev/include/time.h

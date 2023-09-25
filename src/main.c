@@ -107,7 +107,7 @@ int second_main()
 	ti_Read(&data,sizeof(struct montdat_t),1,montdat);
 	gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     gfx_SetTransparentColor(7);
-    settings.cursor_interior = 255;
+    
 	montset = ti_Open("MONTSET","r+");
 	if (montset == 0)
 	{
@@ -239,7 +239,7 @@ void setdesktop()
     gfx_FillRectangle(0,0,320,13);
     gfx_SetTransparentColor(7);
     gfx_TransparentSprite(menuapple,1,0);
-    gfx_SetTextFGColor(254);
+    gfx_SetTextFGColor(0);
     gfx_PrintStringXY("Credits",16,3);
     gfx_TransparentSprite(notification,305,0);
     gfx_TransparentSprite(search,290,0);
@@ -602,7 +602,7 @@ void cursor(unsigned int x, unsigned int y)
 	gfx_SetPixel(x+7,y+11);
 	gfx_SetPixel(x+6,y+10);
 	gfx_Line(x+6,y+9,x+9,y+9);
-	gfx_SetColor(settings.cursor_interior);
+	gfx_SetColor(255);
 	gfx_Line(x+1,y+1,x+1,y+11);
 	gfx_Line(x+2,y+2,x+2,y+10);
 	gfx_Line(x+3,y+3,x+3,y+9);
@@ -621,8 +621,8 @@ void settings_gui(void)
 	gfx_SetTransparentColor(7);
 	gfx_TransparentSprite(finder_corner1,8,20);
 	gfx_TransparentSprite(finder_corner2,8,200);
-	gfx_TransparentSprite(finder_corner3,312,200);
-	gfx_TransparentSprite(finder_corner4,312,20);
+	gfx_TransparentSprite(settingscorner2,312,200);
+	gfx_TransparentSprite(settingscorner,312,20);
 	gfx_SetColor(8);
 	gfx_FillRectangle(8,31,20,169);
 	gfx_FillRectangle(27,20,25,187);
@@ -638,6 +638,7 @@ void settings_gui(void)
 	gfx_Line(220,54,220,64);
 	gfx_Line(250,54,300,54);
 	gfx_Line(300,54,300,64);
+	gfx_SetTextFGColor(0);
 	gfx_PrintStringXY("General",70,54);
 
 	gfx_PrintStringXY("Menu Bar Color:",60,80);

@@ -44,6 +44,6 @@ obj/src/main.c.bc: src/main.c src/main.h \
   src/gfx/launchpad_basic.h src/gfx/launchpad_cprog.h \
   src/gfx/menuapple.h src/gfx/notification.h src/gfx/pcas.h \
   src/gfx/search.h src/gfx/settings_icon.h src/gfx/trig_icon.h \
-  src/gfx/word_icon.h src/gfx/word_file.h src/gfx/background.h \
-  src/detect.h src/about.h src/update.h src/launchpad.h src/io.h \
-  src/error.h
+  src/gfx/word_icon.h src/gfx/word_file.h src/gfx/settingscorner2.h \
+  src/gfx/settingscorner.h src/gfx/background.h src/detect.h src/about.h \
+  src/update.h src/launchpad.h src/io.h src/error.h

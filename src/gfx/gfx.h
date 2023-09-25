@@ -35,6 +35,8 @@ extern "C" {
 #include "trig_icon.h"
 #include "word_icon.h"
 #include "word_file.h"
+#include "settingscorner2.h"
+#include "settingscorner.h"
 #define background_palette_offset 0
 #include "background.h"
 
