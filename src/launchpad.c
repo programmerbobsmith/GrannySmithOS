@@ -8,8 +8,8 @@
 #include <fileioc.h>
 #include <string.h>
 #include "error.h"
-#include <time.h>
 
+#include <sys/timers.h>
 void launchpad_gui(void)
 {
 	zx0_Decompress(gfx_vram,background_compressed);
@@ -121,3 +121,4 @@ void launchpad_prog_c(void)
 	}
 
 }
+
