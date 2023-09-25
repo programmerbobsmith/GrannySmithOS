@@ -7882,7 +7882,8 @@ _startup:
 	pop	hl
 	pop	hl
 	pop	hl
-	ld	hl, -2
+	scf
+	sbc	hl, hl
 	push	hl
 	call	_gfx_SetColor
 	pop	hl
@@ -7935,7 +7936,8 @@ BB32_1:
 	sbc	hl, bc
 	call	pe, __setflag
 	jp	p, BB32_6
-	ld	hl, -2
+	scf
+	sbc	hl, hl
 	push	hl
 	ld	(ix - 3), de
 	call	_gfx_SetColor
@@ -8066,6 +8068,8 @@ BB33_2:
 	push	hl
 	call	_gfx_SetTransparentColor
 	pop	hl
+	ld	hl, 255
+	ld	(_settings+21), hl
 	ld	hl, _.str.1.104
 	push	hl
 	ld	hl, _.str.4.107
@@ -8092,16 +8096,16 @@ BB33_2:
 	ld	(_settings), iy
 	ld	bc, 8
 	ld	(_settings+3), bc
-	ld	bc, 31
+	ld	bc, 12
 	ld	(_settings+6), bc
 	ld	de, 254
 	ld	(_settings+9), de
 	ld	(_settings+12), bc
+	ld	bc, 255
 	ld	(_settings+15), bc
 	ld	(_settings+18), de
 	ld	(_settings+24), iy
-	inc	de
-	ld	(_settings+21), de
+	ld	(_settings+21), bc
 	push	hl
 	ld	hl, 1
 	push	hl
@@ -8324,7 +8328,7 @@ _setdesktop:
 	or	a, a
 	sbc	hl, hl
 	ld	(_app_number), hl
-	ld	hl, 31
+	ld	hl, -6
 	push	hl
 	call	_gfx_SetColor
 	pop	hl
@@ -9455,7 +9459,7 @@ _settings_gui:
 	pop	hl
 	pop	hl
 	pop	hl
-	or	a, a
+	scf
 	sbc	hl, hl
 	push	hl
 	call	_gfx_SetColor
@@ -9486,7 +9490,8 @@ _settings_gui:
 	pop	hl
 	pop	hl
 	pop	hl
-	ld	hl, -2
+	or	a, a
+	sbc	hl, hl
 	push	hl
 	call	_gfx_SetColor
 	pop	hl
@@ -9777,7 +9782,7 @@ _dock_draw:
 	push	hl
 	call	_gfx_SetTransparentColor
 	pop	hl
-	ld	hl, 31
+	ld	hl, -6
 	push	hl
 	call	_gfx_SetColor
 	pop	hl
@@ -13191,7 +13196,7 @@ JTI52_0:
 _update_clock:
 	ld	hl, -2
 	call	__frameset
-	ld	hl, 31
+	ld	hl, 12
 	push	hl
 	call	_gfx_SetColor
 	pop	hl
@@ -13306,7 +13311,7 @@ _update_battery:
 	call	_boot_GetBatteryStatus
 	cp	a, 1
 	jp	nz, BB54_2
-	ld	hl, 31
+	ld	hl, 12
 	push	hl
 	call	_gfx_SetColor
 	pop	hl
@@ -13389,7 +13394,7 @@ _update_battery:
 BB54_2:
 	cp	a, 2
 	jr	nz, BB54_4
-	ld	hl, 31
+	ld	hl, 12
 	push	hl
 	call	_gfx_SetColor
 	pop	hl
@@ -13404,7 +13409,7 @@ BB54_2:
 BB54_4:
 	cp	a, 3
 	jr	nz, BB54_8
-	ld	hl, 31
+	ld	hl, 12
 	push	hl
 	call	_gfx_SetColor
 	pop	hl
@@ -14180,6 +14185,11 @@ _.str.3.106:
 _data:
 	rb	39
 
+	section	.bss,"aw",@nobits
+	public	_settings
+_settings:
+	rb	27
+
 	section	.rodata,"a",@progbits
 	private	_.str.4.107
 _.str.4.107:
@@ -14189,11 +14199,6 @@ _.str.4.107:
 	public	_montset
 _montset:
 	rb	1
-
-	section	.bss,"aw",@nobits
-	public	_settings
-_settings:
-	rb	27
 
 	section	.bss,"aw",@nobits
 	public	_behind_sprite

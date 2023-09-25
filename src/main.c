@@ -107,16 +107,17 @@ int second_main()
 	ti_Read(&data,sizeof(struct montdat_t),1,montdat);
 	gfx_SetPalette(global_palette, sizeof_global_palette, 0);
     gfx_SetTransparentColor(7);
+    settings.cursor_interior = 255;
 	montset = ti_Open("MONTSET","r+");
 	if (montset == 0)
 	{
 		montset = ti_Open("MONTSET","w+");
 		settings.color_appbackground = 0;
 		settings.color_appforeground = 8;
-		settings.color_appheadertext = 31;
+		settings.color_appheadertext = 12;
 		settings.color_appbodytext = 254;
-		settings.color_menu = 31;
-		settings.color_dock = 31;
+		settings.color_menu = 12;
+		settings.color_dock = 255;
 		settings.color_launchpadprog = 254;
 		settings.cursor_outline = 0;
 		settings.cursor_interior = 255;
@@ -210,14 +211,14 @@ void startup (void)
     gfx_ZeroScreen();
     gfx_SetTransparentColor(7);
     gfx_TransparentSprite(applelogo,140,50);
-    gfx_SetColor(254);
+    gfx_SetColor(255);
     gfx_HorizLine(55,115,210);
     gfx_HorizLine(55,120,210);
     gfx_VertLine(54,116,4);
     gfx_VertLine(265,116,4);
     for(int barinc=0;barinc<210;barinc++)
     {
-        gfx_SetColor(254);
+        gfx_SetColor(255);
         if ((clock()%100)==0) 
 		{
             gfx_VertLine(55+barinc,116,4);
@@ -234,7 +235,7 @@ void setdesktop()
     zx0_Decompress(gfx_vram,background_compressed);
     dock_draw();
 	app_number = 0;
-    gfx_SetColor(31);
+    gfx_SetColor(250);
     gfx_FillRectangle(0,0,320,13);
     gfx_SetTransparentColor(7);
     gfx_TransparentSprite(menuapple,1,0);
@@ -297,7 +298,7 @@ void dock_draw(void)
     unsigned int dock_x=0;
     unsigned int dock_y=209;
     gfx_SetTransparentColor(7);
-    gfx_SetColor(31);
+    gfx_SetColor(250);
     gfx_FillRectangle(7,dock_y,306,31);
     gfx_Line(0,219,0,229);
     gfx_Line(1,216,1,232);
@@ -626,10 +627,10 @@ void settings_gui(void)
 	gfx_FillRectangle(8,31,20,169);
 	gfx_FillRectangle(27,20,25,187);
 	gfx_FillRectangle(16,200,12,7);
-	gfx_SetColor(0);
+	gfx_SetColor(255);
 	gfx_FillRectangle(52,20,260,187);
 	gfx_FillRectangle(312,28,7,172);
-	gfx_SetColor(254);
+	gfx_SetColor(0);
 	gfx_Line(60,54,130,54);
 	gfx_Line(60,64,300,64);
 	gfx_Line(130,54,130,64);

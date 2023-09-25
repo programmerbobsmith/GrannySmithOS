@@ -8,7 +8,7 @@
 void update_clock(void)
 {
 
-	gfx_SetColor(31);
+	gfx_SetColor(12);
 	gfx_FillRectangle(212,1,50,10);
 	gfx_SetTextFGColor(254);
 	uint8_t clock_minutes = rtc_Minutes;
@@ -47,7 +47,7 @@ void update_battery(void)
     {
         //Battery is about to die.
         case 1:
-            gfx_SetColor(31);
+            gfx_SetColor(12);
             gfx_FillRectangle(266,3,16,6);
             gfx_SetColor(224);
             gfx_Line(265,3,265,9);
@@ -58,12 +58,12 @@ void update_battery(void)
             break;
         //Battery is 33%.
         case 2:
-            gfx_SetColor(31);
+            gfx_SetColor(12);
             gfx_FillRectangle(272,3,10,6);
             break;
         //Battery is 66%.
         case 3:
-            gfx_SetColor(31);
+            gfx_SetColor(12);
             gfx_FillRectangle(277,3,5,6);
             break;
         //Battery is fully charged.
