@@ -74,11 +74,11 @@ int detect_Enter(unsigned int x, unsigned int y, unsigned int app_number)
 	button[10].xmax = 100;
 	button[10].ymax = 232;
 
-//algebra_icon
-	button[13].xmin = 104;
-	button[13].ymin = 212;
-	button[13].xmax = 124;
-	button[13].ymax = 232;
+//orig: algebra_icon, current: chess
+	button[15].xmin = 104;
+	button[15].ymin = 212;
+	button[15].xmax = 124;
+	button[15].ymax = 232;
 
 //word_close
 	button[11].xmin = 16;
@@ -98,17 +98,17 @@ int detect_Enter(unsigned int x, unsigned int y, unsigned int app_number)
 	button[14].xmax = 68;
 	button[14].ymax = 52;
 
-//chess_app
-	button[15].xmin = 180;
-	button[15].ymin = 212;
-	button[15].xmax = 200;
-	button[15].ymax = 232;
+//chess_app ignore
+	//button[15].xmin = 180;
+	//button[15].ymin = 212;
+	//button[15].xmax = 200;
+	//button[15].ymax = 232;
 
-//geometry_app
-	button[17].xmin = 131;
-	button[17].ymin = 212;
-	button[17].xmax = 151;
-	button[17].ymax = 232;
+//orig: geometry_app current:settings
+	button[20].xmin = 131;
+	button[20].ymin = 212;
+	button[20].xmax = 151;
+	button[20].ymax = 232;
 
 // trigonometry_app
 	button[18].xmin = 155;
@@ -116,11 +116,11 @@ int detect_Enter(unsigned int x, unsigned int y, unsigned int app_number)
 	button[18].xmax = 175;
 	button[18].ymax = 232;
 
-//settings_app
-	button[20].xmin = 206;
-	button[20].ymin = 212;
-	button[20].xmax = 226;
-	button[20].ymax = 232;
+//settings_app ignore
+	//button[20].xmin = 206;
+	//button[20].ymin = 212;
+	//button[20].xmax = 226;
+	//button[20].ymax = 232;
 //settings_menu_color
 	button[21].xmin = 180;
 	button[21].ymin = 80;

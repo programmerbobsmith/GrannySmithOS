@@ -473,42 +473,43 @@ _detect_Enter:
 	ld	hl, -3
 	call	__frameset
 	ld	de, 0
-	ld	hl, 12
-	ld	iy, 16
-	ld	bc, 204
+	ld	iy, 12
+	ld	hl, 16
+	ld	bc, 76
 	ld	a, 1
 	ld	(_button), de
 	ld	(_button+3), de
-	ld	(_button+6), hl
-	ld	(_button+9), hl
-	ld	(_button+13), iy
+	ld	(_button+6), iy
+	ld	(_button+9), iy
+	ld	(_button+13), hl
 	ld	(_button+16), de
-	ld	iy, 40
-	ld	(_button+19), iy
-	ld	(_button+22), hl
-	ld	(_button+39), bc
+	ld	hl, 40
+	ld	(_button+19), hl
+	ld	(_button+22), iy
+	ld	hl, 204
+	ld	(_button+39), hl
 	ld	(_button+42), de
-	ld	bc, 256
-	ld	(_button+45), bc
-	ld	(_button+48), hl
-	ld	bc, 260
-	ld	(_button+52), bc
+	ld	hl, 256
+	ld	(_button+45), hl
+	ld	(_button+48), iy
+	ld	hl, 260
+	ld	(_button+52), hl
 	ld	(_button+55), de
-	ld	bc, 288
-	ld	(_button+58), bc
-	ld	(_button+61), hl
-	ld	(_button+65), bc
+	ld	hl, 288
+	ld	(_button+58), hl
+	ld	(_button+61), iy
+	ld	(_button+65), hl
 	ld	(_button+68), de
-	ld	bc, 300
-	ld	(_button+71), bc
-	ld	(_button+74), hl
-	ld	bc, 304
-	ld	(_button+78), bc
+	ld	hl, 300
+	ld	(_button+71), hl
+	ld	(_button+74), iy
+	ld	hl, 304
+	ld	(_button+78), hl
 	ld	(ix - 3), de
 	ld	(_button+81), de
-	ld	de, 316
-	ld	(_button+84), de
-	ld	(_button+87), hl
+	ld	hl, 316
+	ld	(_button+84), hl
+	ld	(_button+87), iy
 	ld	hl, 4
 	ld	(_button+91), hl
 	ld	de, 212
@@ -523,91 +524,82 @@ _detect_Enter:
 	ld	hl, 48
 	ld	(_button+110), hl
 	ld	(_button+113), iy
-	lea	hl, iy
-	ld	bc, 56
-	ld	(_button+117), bc
+	ld	hl, 56
+	ld	(_button+117), hl
 	ld	(_button+120), de
-	ld	iy, 76
-	ld	(_button+123), iy
-	ld	(_button+126), hl
-	ld	hl, 80
-	ld	(_button+130), hl
+	ld	(_button+123), bc
+	ld	(_button+126), iy
+	ld	bc, 80
+	ld	(_button+130), bc
 	ld	(_button+133), de
-	ld	hl, 100
-	ld	(_button+136), hl
+	ld	iy, 100
+	ld	(_button+136), iy
 	ld	bc, 232
 	ld	(_button+139), bc
 	ld	hl, 104
-	ld	(_button+169), hl
-	ld	(_button+172), de
+	ld	(_button+195), hl
+	ld	(_button+198), de
+	push	de
+	pop	iy
 	ld	hl, 124
-	ld	(_button+175), hl
-	ld	(_button+178), bc
-	ld	hl, 16
-	ld	(_button+143), hl
-	ld	de, 28
-	ld	(_button+146), de
-	ld	(_button+149), hl
-	ld	(_button+152), de
-	ld	(_button+156), hl
-	ld	hl, 40
-	ld	(_button+159), hl
-	ld	de, 48
-	ld	(_button+162), de
-	ld	(_button+165), iy
-	ld	hl, 64
-	ld	(_button+182), hl
-	ld	(_button+185), de
+	ld	(_button+201), hl
+	ld	(_button+204), bc
+	ld	de, 16
+	ld	(_button+143), de
+	ld	hl, 28
+	ld	(_button+146), hl
+	ld	(_button+149), de
+	ld	(_button+152), hl
+	ld	(_button+156), de
+	ld	de, 40
+	ld	(_button+159), de
+	ld	hl, 48
+	ld	(_button+162), hl
+	ld	de, 76
+	ld	(_button+165), de
+	ld	de, 64
+	ld	(_button+182), de
+	ld	(_button+185), hl
 	ld	hl, 68
 	ld	(_button+188), hl
 	ld	hl, 52
 	ld	(_button+191), hl
-	ld	iy, 180
-	ld	(_button+195), iy
-	ld	de, 212
-	ld	(_button+198), de
-	ld	hl, 200
-	ld	(_button+201), hl
-	ld	(_button+204), bc
 	ld	hl, 131
-	ld	(_button+221), hl
-	ld	(_button+224), de
-	ld	hl, 151
-	ld	(_button+227), hl
-	ld	(_button+230), bc
-	ld	hl, 155
-	ld	(_button+234), hl
-	ld	(_button+237), de
-	ld	hl, 175
-	ld	(_button+240), hl
-	ld	(_button+243), bc
-	ld	hl, 206
 	ld	(_button+260), hl
-	ld	(_button+263), de
-	ld	hl, 226
+	ld	(_button+263), iy
+	ld	hl, 151
 	ld	(_button+266), hl
-	ld	(_button+269), bc
-	ld	c, a
-	ld	(_button+273), iy
-	ld	de, 80
-	ld	(_button+276), de
+	push	bc
+	pop	hl
+	ld	(_button+269), hl
+	ld	de, 155
+	ld	(_button+234), de
+	ld	(_button+237), iy
+	ld	de, 175
+	ld	(_button+240), de
+	ld	(_button+243), hl
+	ld	bc, 180
+	ld	(_button+273), bc
+	ld	hl, 80
+	ld	(_button+276), hl
 	ld	de, 210
 	ld	(_button+279), de
 	ld	hl, 90
 	ld	(_button+282), hl
-	ld	(_button+286), iy
+	ld	(_button+286), bc
 	ld	hl, 100
 	ld	(_button+289), hl
 	ld	(_button+292), de
 	ld	hl, 110
 	ld	(_button+295), hl
-	ld	(_button+299), iy
+	ld	(_button+299), bc
 	ld	hl, 120
 	ld	(_button+302), hl
 	ld	(_button+305), de
 	ld	hl, 130
 	ld	(_button+308), hl
-	ld	(_button+312), iy
+	ld	(_button+312), bc
+	ld	c, a
 	ld	hl, 140
 	ld	(_button+315), hl
 	ld	(_button+318), de
@@ -8024,13 +8016,13 @@ _second_main:
 	push	hl
 	pop	de
 	inc	de
-	ld	bc, 23
+	ld	bc, 26
 	ldir
 	ld	a, (_montdat)
 	ld	l, a
 	push	hl
 	push	iy
-	ld	hl, 36
+	ld	hl, 39
 	push	hl
 	ld	hl, _data
 	push	hl
@@ -8050,7 +8042,7 @@ BB33_2:
 	push	hl
 	ld	hl, 1
 	push	hl
-	ld	hl, 36
+	ld	hl, 39
 	push	hl
 	ld	hl, _data
 	push	hl
@@ -8876,7 +8868,7 @@ BB37_2:
 	push	hl
 	ld	hl, 1
 	push	hl
-	ld	hl, 36
+	ld	hl, 39
 	push	hl
 	ld	hl, _data
 	push	hl
@@ -8903,7 +8895,7 @@ BB37_3:
 	push	hl
 	ld	hl, 1
 	push	hl
-	ld	hl, 36
+	ld	hl, 39
 	push	hl
 	ld	hl, _data
 	push	hl
@@ -8928,7 +8920,7 @@ BB37_4:
 	push	hl
 	ld	hl, 1
 	push	hl
-	ld	hl, 36
+	ld	hl, 39
 	push	hl
 	ld	hl, _data
 	push	hl
@@ -8970,7 +8962,7 @@ BB37_6:
 	push	hl
 	ld	hl, 1
 	push	hl
-	ld	hl, 36
+	ld	hl, 39
 	push	hl
 	ld	hl, _data
 	push	hl
@@ -9068,7 +9060,7 @@ BB37_14:
 	push	hl
 	ld	hl, 1
 	push	hl
-	ld	hl, 36
+	ld	hl, 39
 	push	hl
 	ld	hl, _data
 	push	hl
@@ -9099,7 +9091,7 @@ BB37_15:
 	push	hl
 	ld	hl, 1
 	push	hl
-	ld	hl, 36
+	ld	hl, 39
 	push	hl
 	ld	hl, _data
 	push	hl
@@ -9175,7 +9167,7 @@ BB37_27:
 	push	hl
 	ld	hl, 1
 	push	hl
-	ld	hl, 36
+	ld	hl, 39
 	push	hl
 	ld	hl, _data
 	push	hl
@@ -10035,7 +10027,7 @@ _dock_draw:
 	pop	hl
 	ld	hl, 214
 	push	hl
-	ld	hl, 129
+	ld	hl, 106
 	push	hl
 	ld	hl, _chess_icon_data
 	push	hl
@@ -10045,7 +10037,7 @@ _dock_draw:
 	pop	hl
 	ld	hl, 214
 	push	hl
-	ld	hl, 177
+	ld	hl, 131
 	push	hl
 	ld	hl, _settings_icon_data
 	push	hl
@@ -14185,7 +14177,7 @@ _.str.3.106:
 	section	.bss,"aw",@nobits
 	public	_data
 _data:
-	rb	36
+	rb	39
 
 	section	.rodata,"a",@progbits
 	private	_.str.4.107

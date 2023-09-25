@@ -63,6 +63,7 @@ struct montdat_t
 	unsigned int trigonometry;
 	unsigned int chess;
 	unsigned int credits;
+	unsigned int settings;
 }data;
 
 uint8_t montset,montdat;
@@ -99,6 +100,7 @@ int second_main()
 		data.geometry = 0;
 		data.chess = 0;
 		data.credits = 0;
+		data.settings = 0;
 		ti_Write(&data,sizeof(struct montdat_t),1,montdat);
 		ti_Rewind(montdat);
 	}
