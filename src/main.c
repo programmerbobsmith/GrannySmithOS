@@ -20,15 +20,15 @@
 //monterey files
 #include "gfx/gfx.h"
 #include "detect.h"
-#include "algebra.h"
+//#include "algebra.h"
 #include "about.h"
-#include "geometry.h"
+//#include "geometry.h"
 #include "update.h"
 #include "launchpad.h"
 #include "io.h"
-#include "trig.h"
+//#include "trig.h"
 #include "error.h"
-#include "chemistry.h"
+//#include "chemistry.h"
 
 #define MAX_FOLDERS 50
 
@@ -317,12 +317,12 @@ void dock_draw(void)
     gfx_TransparentSprite(launchpad_icon,dock_x+31,dock_y+5);
     gfx_TransparentSprite(word_icon,dock_x+56,dock_y+5);
     gfx_TransparentSprite(pcas,dock_x+81,dock_y+5);
-	gfx_TransparentSprite(algebra_icon,dock_x+106,dock_y+5);
-	gfx_TransparentSprite(geometry_icon,dock_x+131,dock_y+5);
-	gfx_TransparentSprite(trig_icon,dock_x+156,dock_y+5);
+	//gfx_TransparentSprite(algebra_icon,dock_x+106,dock_y+5);
+	//gfx_TransparentSprite(geometry_icon,dock_x+131,dock_y+5);
+	//gfx_TransparentSprite(trig_icon,dock_x+156,dock_y+5);
 	//gfx_TransparentSprite(chem_icon,dock_x+181,dock_y+5);
-	gfx_TransparentSprite(chess_icon,dock_x+181,dock_y+5); // once chem is implemented this should be 206
-	gfx_TransparentSprite(settings_icon,dock_x+206,dock_y+5);
+	gfx_TransparentSprite(chess_icon,dock_x+106,dock_y+5); // once chem is implemented this should be 206
+	gfx_TransparentSprite(settings_icon,dock_x+131,dock_y+5);
 }
 
 void decode_Enter(unsigned int returned)
@@ -417,7 +417,7 @@ void decode_Enter(unsigned int returned)
 			data.algebra++;
 			ti_Write(&data,sizeof (struct montdat_t),1,montdat);
 			ti_Rewind(montdat);
-			selection = algebra_gui();
+			//selection = algebra_gui();
 			switch(selection)
 			{
 				case 0:
@@ -425,10 +425,10 @@ void decode_Enter(unsigned int returned)
 					exit(0);
 					break;
 				case 1:
-					algebra_factoring();
+					//algebra_factoring();
 					break;
 				case 2:
-					algebra_quadratic();
+					//algebra_quadratic();
 					break;
 				case 3:
 					gfx_End();
@@ -471,7 +471,7 @@ void decode_Enter(unsigned int returned)
 			data.geometry++;
 			ti_Write(&data,sizeof(struct montdat_t),1,montdat);
 			ti_Rewind(montdat);
-			selection = geometry_gui();
+			//selection = geometry_gui();
 			switch (selection)
 			{
 				case 0:
@@ -479,22 +479,22 @@ void decode_Enter(unsigned int returned)
 					exit(0);
 					break;
 				case 1:
-					geometry_area_perimeter();
+					//geometry_area_perimeter();
 					break;
 				case 2:
-					geometry_distance();
+					//geometry_distance();
 					break;
 				case 3:
-					geometry_mid_slope();
+					//geometry_mid_slope();
 					break;
 				case 4:
-					geometry_pythag();
+					//geometry_pythag();
 					break;
 				case 5:
-					geometry_slope_forms();
+					//geometry_slope_forms();
 					break;
 				case 6:
-					geometry_surface_area();
+					//geometry_surface_area();
 					break;
 			}
 			break;
@@ -503,23 +503,23 @@ void decode_Enter(unsigned int returned)
 			data.trigonometry++;
 			ti_Write(&data,sizeof(struct montdat_t),1,montdat);
 			ti_Rewind(montdat);
-			selection = trig_gui();
+			//selection = trig_gui();
 			switch (selection)
 			{
 				case 1:
-					trig_arg();
+					//trig_arg();
 					break;
 				case 2:
-					trig_degrad(); //this is complete
+					//trig_degrad(); //this is complete
 					break;
 				case 3:
-					trig_prob();
+					//trig_prob();
 					break;
 				case 4:
-					trig_seq_series();
+					//trig_seq_series();
 					break;
 				case 5:
-					trig_triangle_solver(); // this is complete
+					//trig_triangle_solver(); // this is complete
 					break;
 			}
 			break;
