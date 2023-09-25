@@ -1,6 +1,6 @@
 # MakeFile for GrannySmithOS
 
-NAME = MONTEREY
+NAME = MACTEST
 ICON = icon.png
 DESCRIPTION = "GrannySmithOS v 12.1.1"
 COMPRESSED = YES
